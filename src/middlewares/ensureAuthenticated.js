@@ -11,7 +11,7 @@ function ensureAuthenticated( request, response, next){
         throw new AppError("JWT Token não informado", 401);
     }
 
-    const [, token ] = authHeader.split(" ");
+    const [, token ] = authHeader.split(" ");// Bearer xxxx seria o tipo de token que utilizamos 
 
     try{
 
@@ -21,7 +21,7 @@ function ensureAuthenticated( request, response, next){
         id:Number(user_id),
     };
 
-    return next()
+    return next();
 
     }catch{
 

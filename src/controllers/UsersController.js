@@ -43,7 +43,7 @@ class UsersController {
         if(userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id){
             throw new AppError("Este e-mail já esta em uso.");
         }
-
+ 
         user.name = name ?? user.name;
         user.email = email ?? user.email; 
 
@@ -88,3 +88,4 @@ module.exports = UsersController
  * delete - DELETE para remover um registro 
  * 
  */ 
+
